@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "mulish", sans-serif !important;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 80px;
+}
+/* ============thanh điều hướng============ */
+.dieu-huong {
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 5%;
+}
+
+.nav a {
+    padding: 0;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.nav i {
+    color: inherit;
+    left: 2px;
+    font-size: 10px;
+}
+
+.trangchu {
+    color: #84857e;
+}
+
+.nav .trangchu:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+/* ============form đăng nhập========== */
+form {
+    width: 520px;
+    height: 500px;
+    margin: 50px auto;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+    /* lần lượt là x - y - độ mờ */
+}
+
+.media {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.media a {
+    text-decoration: none;
+    width: 227px;
+    height: 54px;
+    background-color: #626242;
+    color: white;
+    border: 1.5px solid #626242;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.tk::before,
+.tk::after {
+    position: absolute;
+    content: "";
+    width: 180px;
+    height: 0.5px;
+    background-color: black;
+}
+
+.tk::before {
+    left: 0;
+    top: 8px;
+}
+
+.tk::after {
+    right: 0;
+    top: 8px;
+}
+
+.box-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box-form input {
+    width: 415px;
+    padding: 15px;
+    border: 1.5px solid lightgray;
+}
+
+.box-form input:focus {
+    outline: none;
+}
+
+.dangnhap {
+    height: 45px;
+    font-size: 18px;
+    font-family: "mulish", sans-serif !important;
+    background-color: #626242;
+    color: white;
+    border: 1.5px solid #626242;
+}
+
+.dangnhap:hover,
+.media a:hover {
+    color: #626242;
+    background-color: white;
+}

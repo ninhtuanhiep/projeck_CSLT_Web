@@ -1,0 +1,1015 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "mulish", sans-serif !important;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+#login-container {
+    z-index: 999;
+}
+
+/* ------------------------------PHẦN HEADER ----------------------------*/
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #626862;
+}
+
+a {
+    text-decoration: none;
+    padding: 0px 20px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    color: inherit;
+    /* kế thừa giá trị màu */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: white;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
+    height: 80px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.container>ul>li {
+    line-height: 80px;
+    padding: 0 10px;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo img {
+    width: 159px;
+    /* Tính tỷ lệ trước */
+}
+
+.container li:hover>a {
+    color: #626862;
+}
+
+.sanpham {
+    position: relative;
+    /* Giữ vị trí gốc */
+}
+
+.subnav {
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    /* Tạo vị trí tuyệt đối */
+    top: 98%;
+    left: 0;
+    width: 200px;
+    height: auto;
+    z-index: 999;
+    display: none;
+    line-height: 2;
+
+}
+
+.subnav2 {
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 43%;
+    right: -200px;
+    display: none;
+    width: 200px;
+}
+
+.ti-angle-right {
+    position: relative;
+    color: #626862;
+    cursor: pointer;
+    right: -100px;
+}
+
+
+.subnav3 {
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    /* Tạo vị trí tuyệt đối */
+    top: 98%;
+    right: 25%;
+    width: 200px;
+    height: auto;
+    z-index: 999;
+    display: none;
+    line-height: 2;
+}
+
+.sanpham:hover .subnav,
+.nhan:hover>.subnav2,
+.tintuc:hover .subnav3 {
+    /* Khi rê chuột vào thẻ li có class sanpham */
+    display: block;
+}
+
+.subnav .line,
+.subnav3 .line {
+    width: 80%;
+    background-color: #626862;
+    height: 0.5px;
+    margin: 0px auto;
+}
+/* ========== THANH TÌM KIẾM ========== */
+.search-container {
+    position: relative;
+    cursor: pointer;
+    color: #626862;
+}
+
+.ti-search {
+    padding: 25px 0px !important;
+}
+
+.input-ti{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    border-radius: 30px;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.thanhtimkiem {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    font-size: 5px;
+    border-radius: 30px;
+    background: #ba9659;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+}
+
+.search-box {
+    opacity: 0;
+    /*công dụng tương tự display:none */
+    position: absolute;
+    top: 40px;
+    right: -110px;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-container:hover .search-box {
+    opacity: 1;
+    /* công dụng tương tự display:block nhưng kết hợp được với trandition */
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+/* --------- ICONS --------- */
+.icon-container {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+}
+
+.icon-container i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0 5px;
+}
+
+.icon-container i:hover {
+    color: #979752;
+}
+
+/*----------------------PHẦN BANNER Ở HEADER----------------------------- */
+
+/* ==================== SLIDER CHUNG ==================== */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 0 30px;
+    margin: 0 0 40px;
+}
+
+/* Slide container */
+.slides {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.banner {
+    width: 50%;
+    /* Mỗi banner chiếm 50% chiều rộng */
+    flex-shrink: 0;
+    height: 36.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Hình ảnh trong slider */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================== ĐIỀU KHIỂN SLIDE ==================== */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active1 {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation: fade 1.5s ease-in;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ==================== NỘI DUNG BANNER ==================== */
+.chunen {
+    position: absolute;
+    color: #4d4d2f;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    left: 80px;
+    top: 20%;
+    max-width: 750px;
+    word-wrap: break-word;
+    z-index: 1;
+}
+
+.chunen2 {
+    position: absolute;
+    color: #4d4d2f;
+    left: 80px;
+    bottom: 45%;
+    font-size: 14px;
+    max-width: 620px;
+    z-index: 1;
+}
+
+.timhieu {
+    position: absolute;
+    border: 2px solid #ba9659;
+    padding: 15px 5px;
+    width: 150px;
+    background-color: transparent;
+    z-index: 1;
+    left: 80px;
+    bottom: 150px;
+}
+
+.timhieu a {
+    color: #ba9659;
+    text-decoration: none;
+}
+
+.timhieu:hover {
+    background-color: #ba9659;
+    transition: 0.5s;
+}
+
+.timhieu:hover a {
+    color: white;
+}
+
+/*=============Content 1================*/
+/*==================Bộ sưu tập trang sức==================*/
+.content {
+    position: relative;
+    font-family: "mulish", sans-serif;
+}
+
+.tieude {
+    position: relative;
+    text-align: center;
+    margin: 0 0 27px;
+}
+
+.tieude1 {
+    font-size: 30px;
+    color: #626842;
+    margin: 0 0 14px;
+
+}
+
+.tieude2 {
+    font-size: 15px;
+    color: #626842;
+    margin: 0 0 27px;
+}
+
+/*================== cấu hình chung các ô bộ sưu tập=============== */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 45px;
+}
+
+.col-6 {
+    position: relative;
+    width: 440px;
+    height: 590px;
+    border: #ba9659 solid 0.3px;
+    margin: 0 0 27px;
+    padding: 0 15px;
+}
+
+.col-6 img {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.col-6 h4 {
+    position: absolute;
+    font-size: 20px;
+    color: #626842;
+    font-weight: 700;
+    max-width: 200px;
+    text-align: justify;
+    margin: 0 0 14px;
+    padding: 0;
+    left: 40px;
+}
+
+.col-6 .chitiet {
+    font-size: 14px;
+    color: #84857e;
+    text-align: justify;
+    margin: 0 0 14px;
+    left: 40px;
+    max-width: 300px;
+}
+
+.xemthem_row {
+    width: 147px;
+    height: 52px;
+    left: 40px;
+    background-color: #F5F2EA;
+    display: flex;
+    /* Sử dụng Flexbox */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+
+}
+
+.xemthem_row {
+    text-decoration: none;
+    color: #ba9659;
+    font-size: 14px;
+    padding: 11px 22.5px;
+    /* Có thể tối ưu lại nếu cần */
+}
+
+.xemthem_row:hover {
+    background-color: white;
+    color: #ba9659;
+    border: 1px solid #ba9659;
+    transition: 0.3s ease;
+}
+
+.box-inside {
+    width: 33px;
+    height: 31px;
+    background-color: #F5F2EA;
+}
+
+/*==================Bộ sưu tập hoa tai sang trọng==================*/
+
+.col-6 .hoatai {
+    top: 70%;
+}
+
+.col-6 .chitiet_hoatai {
+    top: 80%;
+}
+
+.xt_hoatai {
+    bottom: 4%;
+}
+
+.box_hoatai {
+    top: 94.6%;
+    left: 92.4%;
+}
+
+/*==================Bộ sưu vòng tay==================*/
+.col-6 .vt {
+    top: 40%;
+}
+
+.col-6 .vongtay {
+    top: 48px;
+    left: 40px;
+}
+
+.chitiet_vongtay {
+    top: 18%;
+}
+
+.xt_vongtay {
+    top: 25%;
+}
+
+.box_vongtay {
+    left: 92.4%;
+}
+
+/*==================Bộ sưu tập cài tóc thiết kế==================*/
+.col-6 .caitoc {
+    top: 70%;
+}
+
+.col-6 .chitiet_caitoc {
+    top: 80%;
+}
+
+.xt_caitoc {
+    bottom: 4%;
+}
+
+.box_caitoc {
+    top: 94.6%;
+    left: 92.4%;
+}
+
+/*==================Content 2==================*/
+/*==================Sản phẩm==================*/
+.product-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #F5F2EA;
+    height: 400px;
+    position: relative;
+}
+
+.product-section .sp {
+    font-size: 30px;
+    color: #626842;
+    margin: 0 0 14px;
+}
+
+.product-section .kp {
+    font-size: 15px;
+    margin: 0 0 27px;
+}
+
+.product-card p {
+    font-size: 13.5px;
+    padding-top: 15px;
+}
+
+.product-card a{
+    padding: 0;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: space-between;
+    padding: 10px 7px 0 7px;
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    border: 0.3px solid #ba9659;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.product-card img:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.product-card a:hover {
+    color: #ba9659;
+}
+
+/*==================Hot TREND, GỢI Ý CHO BẠN==================*/
+.product-section2 {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    position: relative;
+}
+
+.discount {
+    position: absolute;
+    display: block;
+    width: 42px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ba9659;
+    color: white;
+    font-size: 11px;
+    line-height: 20px;
+    z-index: 1;
+    left: 5%;
+}
+
+.product-section2 .hot-trend {
+    font-size: 30px;
+    color: #626842;
+    margin: 0 0 14px;
+}
+
+.product-section2 .xh {
+    font-size: 15px;
+    margin: 0 0 27px;
+}
+
+.box-sp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px 35px;
+}
+
+.product img {
+    width: 100%;
+    background-color: #f8f8f8;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product a {
+    display: block;
+    text-align: center;
+}
+
+.product:hover img {
+    transition: transform 0.8s ease;
+    transform: translateY(-7px);
+}
+
+.heading:hover {
+    color: #ba9659 !important;
+    transition: 0.5s ease;
+}
+
+/* ===================DEAL HOT TRONG NGÀY=============== */
+.slider-box {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 1310px;
+    height: 800px;
+    padding: 72px;
+    margin: auto;
+    background-color: #626842;
+    margin-bottom: 50px;
+}
+
+.slider-box .dealhot {
+    font-size: 30px;
+    color: white;
+    margin: 0 0 14px;
+}
+
+.slider-box .dl {
+    color: white;
+    font-size: 16px;
+    margin: 0 0 27px;
+}
+
+.duong-dut {
+    width: 80%;
+    height: 1.5px;
+    background: repeating-linear-gradient(to right,
+            #ccc,
+            #ccc 2px,
+            transparent 2px,
+            transparent 6px);
+}
+
+
+.slide-sp {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    color: #F5F2EA;
+}
+
+.slide-sp.active2 {
+    display: flex !important;
+}
+
+.slide-sp img {
+    width: 455px;
+    height: 550px;
+    object-fit: cover;
+    padding: 20px;
+    background-color: white;
+}
+
+.themgiohang {
+    position: absolute;
+    display: grid;
+    place-content: center;
+    padding: 10px 5px;
+    width: 200px;
+    height: 50px;
+    background-color: #ba9659;
+    color: white;
+    border: 1.5px solid #ba9659;
+}
+
+.themgiohang:hover {
+    background-color: #626842;
+    transition: 0.3s;
+}
+
+.themgiohang:hover a {
+    color: #ba9659;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #333;
+    border: none;
+    font-size: 20px;
+    padding: 5px 13px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev:hover,
+.next:hover{
+    background-color: #ba9659;
+    transition: 0.3s;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* ================ Tin mới nhất ================ */
+.carousel-info {
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.carousel-container-info {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-box-item {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-info .tinmoi {
+    font-size: 30px;
+    color: #626842;
+    margin: 0 0 14px;
+}
+
+.carousel-info .tm {
+    font-size: 16px;
+    margin: 0 0 27px;
+}
+
+.item-card {
+    text-align: justify;
+    padding: 10px;
+    margin: 0 30px 27px 0;
+    flex: 0 0 33.33%;
+    height: 477px;
+    line-height: 22px;
+    border: 1.75px solid #F4E8DA;
+    overflow: hidden;
+}
+
+.item-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.btn-tin-xemthem {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    width: 150px;
+    height: 50px;
+    background-color: #F5F2EA;
+    color: #ba9659;
+
+}
+
+.btn-tin-xemthem:hover {
+    background-color: white;
+    border: 1.5px solid #ba9659;
+    transition: 0.3s;
+}
+
+.btn-tin-xemthem:hover a {
+    color: #ba9659;
+}
+
+
+
+/*==========Footer============*/
+.box-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: "mulish", sans-serif;
+
+}
+
+.bottom_footer {
+    position: relative;
+    background-color: #626842;
+    color: white;
+    height: 75px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*==== cấu hình chung footer 2 3 4 ======*/
+.footer2,
+.footer3,
+.footer4 {
+    background-color: #626842;
+    color: white;
+    padding: 50px 0;
+    width: 25%;
+    height: 360px;
+    position: relative;
+}
+
+/*==== footer 1 ======*/
+.footer1 {
+    position: relative;
+    display: block;
+    background-color: #575d38;
+    color: white;
+    padding: 50px 0;
+    width: 25%;
+    height: 360px;
+}
+
+.footer1 div {
+    position: absolute;
+    top: 30px;
+}
+
+.icon-box {
+    position: absolute;
+    display: flex;
+    bottom: 20%;
+    left: 15%;
+    z-index: 1;
+}
+
+.icon-ti {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #ba9659;
+    border-radius: 50%;
+}
+
+.icon-ti a {
+    font-size: 15px;
+}
+
+.icon-ti:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+
+.icon-ti:hover a {
+    color: #626842;
+}
+
+.thongtin {
+    position: relative;
+    padding: 20px 0;
+    left: 20%;
+}
+
+.thongtin2 {
+    position: relative;
+    padding: 10px 0;
+    left: 20%;
+    max-width: 300px;
+    word-wrap: break-word;
+
+}
+
+/*===footer 2======*/
+
+.lienket {
+    position: relative;
+    padding: 0;
+    margin: 0 0 27px;
+    left: 20%;
+    font-size: 18px;
+}
+
+.footer2 .ds {
+    list-style-type: none;
+}
+
+.footer2 ul li {
+    margin: 0 0px 18px;
+}
+
+.ds li:hover a {
+    color: #ba9659;
+}
+
+.thongtin3 {
+    position: relative;
+    padding: 0;
+    left: 20%;
+    max-width: 300px;
+    word-wrap: break-word;
+
+}
+
+/*====footer 3=======*/
+.thongtin4 {
+    position: relative;
+    padding: 0;
+
+}
+
+.chinhsach {
+    position: relative;
+    padding: 0;
+    margin: 0 0 27px;
+    left: 5%;
+    font-size: 18px;
+}
+
+.footer3 .ds2 {
+    list-style-type: none;
+}
+
+.footer3 ul li {
+    margin: 0 20px 18px;
+}
+
+.ds2 li:hover a {
+    color: #ba9659;
+}
+
+/*====footer 4=======*/
+.dangky {
+    position: relative;
+    padding: 0;
+    margin: 0 0 27px;
+    font-size: 18px;
+}
+
+.footer4 p {
+    position: relative;
+    padding: 0;
+    margin: 0 0 27px;
+    font-size: 15px;
+    max-width: 280px;
+    word-wrap: break-word;
+
+}
+
+.footer4 input[type="email"] {
+    margin: 0 9px 0 0;
+    padding: 8px 12px;
+    width: 270px;
+    height: 45px;
+    border: none;
+}
+
+.footer4 input[type="email"]:focus {
+    outline: none;
+}
+
+.dk a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.dk {
+    width: 270px;
+    height: 45px;
+    background-color: #ba9659;
+    padding: 11px 32px;
+    margin: 15px 0;
+    text-align: center;
+    border: 2px solid #ba9659;
+}
+
+.dk:hover {
+    background-color: #626842;
+    transition: 0.5s;
+}
+
+.dk:hover a {
+    color: #ba9659;
+}

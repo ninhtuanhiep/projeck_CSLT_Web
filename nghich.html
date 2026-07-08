@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí người dùng</title>
+    <style>
+/* Overlay mờ nền */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: none;
+}
+
+/* Modal đăng nhập */
+.login-modal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -100%); /* ban đầu nằm trên */
+  opacity: 0;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: none;
+}
+
+    </style>
+</head>
+<body>
+<!-- Nút mở form -->
+<button onclick="openLogin()">Đăng nhập</button>
+
+<!-- Lớp phủ mờ nền -->
+<div id="overlay" class="overlay" onclick="closeLogin()"></div>
+
+<!-- Hộp đăng nhập -->
+<div id="loginModal" class="login-modal">
+  <h2>ĐĂNG NHẬP</h2>
+  <input type="text" placeholder="Tài khoản">
+  <input type="password" placeholder="Mật khẩu">
+  <button>Đăng nhập</button>
+</div>
+
+<script>
+function openLogin() {
+  const overlay = document.getElementById("overlay");
+  const modal = document.getElementById("loginModal");
+
+  overlay.style.display = "block";
+  modal.style.display = "block";
+
+  // Cho browser thời gian áp dụng display trước khi animate
+  setTimeout(() => {
+    modal.style.transform = "translate(-50%, 0)";
+    modal.style.opacity = "1";
+  }, 10);
+}
+
+function closeLogin() {
+  const overlay = document.getElementById("overlay");
+  const modal = document.getElementById("loginModal");
+
+  // Trượt lên và làm mờ đi
+  modal.style.transform = "translate(-50%, -100%)";
+  modal.style.opacity = "0";
+
+  // Chờ hiệu ứng xong mới ẩn
+  setTimeout(() => {
+    overlay.style.display = "none";
+    modal.style.display = "none";
+  }, 500);
+}
+</script>
+</body>
+</html> 

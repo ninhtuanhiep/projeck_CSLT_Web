@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "mulish", sans-serif !important;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+#login-container {
+    z-index: 999;
+}
+
+/* ============thanh điều hướng============ */
+.dieu-huong{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background-color: #f5f2ea;
+}
+
+.nav{
+    display: flex;  
+    align-items: center;
+    position: relative;
+    left: 5%;
+}
+
+.nav a{
+    padding: 0;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.nav i{
+    color: inherit;
+    left: 2px;
+    font-size: 10px;
+}
+
+.trangchu{
+    color: #84857e;
+}
+
+.nav .trangchu:hover{
+    color: black;
+    transition: 0.5s;
+}
+
+
+/* ==================== content ==================== */
+.content{
+    position: relative;
+    margin: 25px auto;
+    padding: 0 15px;
+    width: 92%;
+    margin-bottom: 70px;
+}
+
+/* ==================== hinh ảnh ==================== */  
+.hinh_anh{
+    text-align: center;
+    margin: 30px 0;
+}
+.hinh_anh img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/*==========nội dung============*/
+.noi_dung p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.chiase{
+    display: flex;
+    list-style-type: none;
+}
+
+.chiase a{
+    padding: 7px;
+    font-size: 13px;
+}
+
+ul a:hover{
+    color: #6a7143;
+    transition: 0.5s;
+}

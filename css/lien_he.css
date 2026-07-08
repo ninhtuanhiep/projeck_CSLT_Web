@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "mulish", sans-serif !important;
+    background-color: white;
+    color: #333;
+    padding-top: 80px;
+}
+/* =======================Content============================= */
+.content-box{
+    position: relative;
+    margin: 25px auto;
+    padding: 0 15px;
+    max-width: 92%;
+    margin-bottom: 60px;
+}
+
+.colum-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ============ Thanh điều hướng ============== */
+.dieu-huong{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background-color: #f5f2ea;
+}
+
+.nav{
+    display: flex;  
+    align-items: center;
+    position: relative;
+    left: 5%;
+}
+.nav a{
+    padding: 0;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.nav i{
+    color: inherit; 
+    left: 2px;
+    font-size: 10px;
+}
+
+.trangchu{
+    color: #84857e;
+}
+
+.nav .trangchu:hover{
+    color: black;
+    transition: 0.5s;
+}
+/* =============Liên hệ với chúng tôi ================*/
+
+.colum-4{
+    display: grid;
+    place-items: center;
+    width: 410px;
+    height: 210px;  
+    background-color: #f5f2ea;
+    position: relative;
+    border: 1px solid #f1ead4;
+    margin-bottom: 50px;
+}
+
+.box-ic{
+    display: grid;
+    place-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #626842;
+    position: absolute;
+    top: 15%;
+}
+
+.box-ic i{
+    color: #f5f2ea;
+}
+
+.info-ha{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    font-size:16px ;
+}
+
+.info-ha p{
+    margin: 0 0 9px;
+    font-size: 18px !important;
+    font-weight: 700;
+}
+
+/* ============Gửi yêu cầu============ */
+.input-form{
+    width:630px;
+    height: 50px;
+    border: 2px solid #f5f2ea;
+    padding: 15px ;
+}
+
+.text:focus, .number:focus, .email:focus, .noidung:focus{
+    outline: none;
+}
+
+.text::placeholder, .number::placeholder, .email::placeholder, .noidung::placeholder{
+    font-size: 15px;
+    color: #84857e;
+}
+
+.submit{
+    width: 160px;
+    height: 50px;
+    border: none;
+    background-color: #626842;
+    color: white;
+    font-size: 15px;
+}
+
+.submit:hover{
+    border: 1px solid #626842;
+    background-color: white;
+    color: #626842;
+    transition: 0.5s;
+}

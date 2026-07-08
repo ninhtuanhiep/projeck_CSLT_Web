@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dang_nhap.css">
+    <link rel="stylesheet" href="/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/responsive_trangchu.css">
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="dieu-huong">
+        <nav class="nav">
+            <a class="trangchu" href="/html/trangchu.html">Trang chủ<i class="ti-angle-right"></i></a>
+            <div><a class="lienhe" href="/html/dang_nhap.html"><span style="font-weight: 600; color: #333;">Đăng nhập</span></a></div>
+        </nav>
+    </div>
+
+    <form id="form-dn" action="" method="post" enctype="application/x-www-form-urlencoded" onsubmit="return kiemTraForm()">
+        <h1 style="font-size: 26px; padding: 27px 0 0;margin: 0; text-align: center;">ĐĂNG NHẬP</h1>
+        <div style="padding: 25px;">
+            <div class="media">
+                <a href=""><i class='bx bxl-google'></i> Đăng nhập google</a>
+                <a href=""><i class='bx bxl-facebook-circle'></i>Đăng nhập facebook</a>
+            </div>
+            <div class="box-form">
+                <p class="tk" style="text-align: center;position: relative;font-size: 13px;">Hoặc tài khoản</p>
+                <input type="text" name="" id="taikhoan" placeholder="Tài khoản">
+                <input type="password" name="" id="matkhau" placeholder="Mật khẩu">
+                <a href="/html/quen_mk.html" style="text-decoration: none; color: #333; font-size: small; padding: 0;">Quên mật khẩu?</a>
+                <button class="dangnhap" >Đăng nhập</button>
+                <a href="/html/dang_ky.html" class="dangkyngay" style="font-size: 15px; color: #626242; margin: 0 ;padding: 0;cursor: pointer;"><strong>ĐĂNG KÝ NGAY</strong></a>
+            </div>
+        </div>
+    </form>
+    <div id="footer"></div>
+</body>
+<script>
+     function kiemTraForm() {
+        var taikhoan = document.getElementById("taikhoan").value;
+        var matkhau = document.getElementById("matkhau").value;
+        if (taikhoan == "" || matkhau == "") {
+            alert("Vui lòng nhập tài khoản và mật khẩu.");
+            return false;
+        }
+        return true;
+    }
+</script>
+   
+<script src="/js/response_header_and_footer.js"></script>
+</html>

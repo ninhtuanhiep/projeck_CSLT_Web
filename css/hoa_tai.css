@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "mulish", sans-serif !important    ;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 80px;
+}
+/* ============thanh điều hướng============ */
+.dieu-huong{
+    width: 100%;
+    height: 40px;
+    background-color: #f5f2ea;
+    display: flex;
+}
+
+.nav{
+    display: flex;  
+    align-items: center;
+    position: relative;
+    left: 5%;
+}
+
+.nav a{
+    padding: 0;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.nav i{
+    color: inherit;
+    left: 2px;
+    font-size: 10px;
+}
+
+.trangchu{
+    color: #84857e;
+}
+
+.nav .trangchu:hover{
+    color: black;
+    transition: 0.5s;
+}
+/* =============thanh điều hướng 2 ============== */
+.nav-box h2{
+    font-size: 30px;
+    font-weight: 700;
+    color: #626842;
+}
+.nav-box .colum-style{
+    width: 1px;
+    background-color: lightgray;
+    margin: 0 10px;
+    height: 20px;
+    margin: 0 2px;
+}
+.nav-box .boloc{
+    background-color:white;
+    border: 1px solid #84857e;
+    list-style: none;
+    text-align: left;
+    height: auto;
+    position: absolute;
+    width: 180px;
+    z-index: 1;
+    right: 10px;
+}
+
+.nav-box .boloc li{
+    padding: 15px;
+}
+
+.boloc-box .boloc{
+    display: none;
+}
+
+.boloc-box:visited .boloc{
+    display:block;
+}
+.ti-align-center:hover {
+    color: rgb(27, 99, 27);
+    transition: 0.5s;
+}
+.hienthi span:hover{
+    color: rgb(22, 102, 22);
+}
+
+.nav-box .boloc li:hover{
+    background-color: lightgray;
+    transition: 0.5s;
+}
+
+
+/* ===============content================= */
+
+
+.product-section2 {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    position: relative;
+  }
+  .discount{
+    position: absolute;
+    display: block;
+    width: 42px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ba9659;
+    color: white;
+    font-size: 11px;
+    line-height: 20px;
+    z-index: 1;
+    left: 5%;
+  }
+
+  .product-section2 .hot-trend {
+    font-size: 30px;
+    color: #626842;
+    margin: 0 0 14px;
+  }
+
+  .product-section2 .xh {
+    font-size: 15px;
+    margin: 0 0 27px;
+  }
+
+  .box-sp{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px 35px;
+  }
+
+  .product img{
+    width: 100%;
+    background-color: #f8f8f8;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product a{
+    display: block;
+    text-align: center;
+  }
+
+  .product:hover img{
+    transition:transform 0.8s ease;
+    transform: translateY(-7px);
+  }
+
+   .heading:hover{
+    color: #ba9659 !important;
+    transition: 0.5s ease;
+  }
+
+  
+
+/* ====================ket thuc content=========================== */

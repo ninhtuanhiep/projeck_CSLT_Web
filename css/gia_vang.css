@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "mulish", sans-serif !important;
+    background-color: white;
+    color: #333;
+    padding-top: 80px;
+}
+/* =======================Content============================= */
+/* ================Thanh điều hướng ========================= */
+
+.dieu-huong {
+    width: 100%;
+    height: 40px;
+    background-color: #f5f2ea;
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 5%;
+}
+
+.nav a {
+    padding: 0;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.nav i {
+    color: inherit;
+    left: 2px;
+    font-size: 10px;
+}
+
+.trangchu {
+    color: #84857e;
+}
+
+.nav .trangchu:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+/* ==========Bảng vàng=============== */
+
+.container-bangvang {
+    width: 92%;
+    position: relative;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.chiase {
+    display: flex;
+    list-style-type: none;
+}
+
+.chiase a {
+    padding: 7px;
+    font-size: 13px;
+}
+
+ul a:hover {
+    color: #6a7143;
+    transition: 0.5s;
+}
+
+/* ================Bài viết liên quan =================== */
+
+.carousel-info {
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.carousel-container-info {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carousel-box-item {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-info .bv {
+    font-size: 30px;
+    color: #626842;
+    margin: 0 0 14px;
+}
+
+.item-card {
+    text-align: justify;
+    padding: 10px;
+    margin: 0 30px 27px 0;
+    flex: 0 0 33.33%;
+    height: 477px;
+    line-height: 22px;
+    border: 1.75px solid #F4E8DA;
+
+}
+
+.item-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.btn-tin-xemthem {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    width: 150px;
+    height: 50px;
+    background-color: #F5F2EA;
+    color: #ba9659;
+
+}
+
+.btn-tin-xemthem:hover {
+    background-color: white;
+    border: 1.5px solid #ba9659;
+    transition: 0.3s;
+}
+
+.btn-tin-xemthem:hover a {
+    color: #ba9659;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #333;
+    border: none;
+    font-size: 20px;
+    padding: 5px 13px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: #ba9659;
+    transition: 0.3s;
+}
